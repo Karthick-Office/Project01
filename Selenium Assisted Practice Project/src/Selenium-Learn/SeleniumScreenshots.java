@@ -13,6 +13,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SeleniumScreenshots {
 	
+//	●	First , close the Firefox if it is open.
+//	●	Open Run (Windows+R) and type firefox.exe -p and click OK.
+//	●	A dialogue box will open named “Firefox -choose user profile.”
+//	●	Select the option “Create Profile” from the window, and a Wizard will open. Click on Next.
+//	●	Provide your profile name which you want to create, and click on the Finish button.
 	
 	//Try with JavascriptExecutor
 
