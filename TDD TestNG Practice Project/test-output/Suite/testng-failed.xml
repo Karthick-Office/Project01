@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test Google(failed)">
+    <parameter name="author" value="Karthick"/>
+    <classes>
+      <class name="com.TestNg.ExtentReport.TestClass">
+        <methods>
+          <include name="generateTestStatus"/>
+          <include name="InitalizeExtentReport"/>
+          <include name="closebrowser"/>
+          <include name="generateReports"/>
+          <include name="openBrowser"/>
+          <include name="TestGoogle"/>
+        </methods>
+      </class> <!-- com.TestNg.ExtentReport.TestClass -->
+    </classes>
+  </test> <!-- Test Google(failed) -->
+  <test thread-count="5" name="Test rediff(failed)">
+    <parameter name="author" value="Simplilearn"/>
+    <classes>
+      <class name="com.TestNg.ExtentReport.TestClass">
+        <methods>
+          <include name="generateTestStatus"/>
+          <include name="Testfacebook"/>
+          <include name="InitalizeExtentReport"/>
+          <include name="closebrowser"/>
+          <include name="generateReports"/>
+          <include name="openBrowser"/>
+          <include name="TestGoogle"/>
+          <include name="Testrediff"/>
+        </methods>
+      </class> <!-- com.TestNg.ExtentReport.TestClass -->
+    </classes>
+  </test> <!-- Test rediff(failed) -->
+</suite> <!-- Failed suite [Suite] -->
