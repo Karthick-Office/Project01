@@ -1,0 +1,36 @@
+pipeline{
+    
+    tools{
+        maven 'mymaven'
+    }
+    
+    agent any 
+    stages{
+        stage('Clone the repo')
+        {
+            steps{
+            git 'https://github.com/Karthick-Office/CICD-Maven-Project.git'
+            }
+        }
+        
+        stage('CompileCode'){
+            steps{
+                sh 'mvn compile'
+            }
+        }
+        
+        stage('TestCode'){
+            steps{
+                sh 'mvn test'
+            }
+        }
+        
+        stage('PackgeCode'){
+            steps{
+                sh 'mvn package'
+            }
+        }
+        
+        
+    }
+}
