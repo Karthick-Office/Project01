@@ -24,7 +24,7 @@ public class HooksTest {
 		System.out.println("Close the DB connection");
 	}
 
-	@After(order = 0,value="@regression")
+	@After(order = 0,value="not @db and @regression")
 	public void teardown()
 	{
 		

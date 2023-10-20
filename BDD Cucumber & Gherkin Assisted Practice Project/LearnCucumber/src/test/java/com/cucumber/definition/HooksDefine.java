@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-public class Hooks {
+public class HooksDefine {
 WebDriver driver;
 	
 	@Given("I am on tutorialsNinja Homepage")

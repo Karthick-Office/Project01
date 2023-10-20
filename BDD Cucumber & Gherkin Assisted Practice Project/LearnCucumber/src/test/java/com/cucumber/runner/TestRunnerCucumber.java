@@ -6,10 +6,14 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src\\test\\java\\com\\cucumber\\features\\TagsDemo.feature",
-				 glue= {"definition"},
-				 dryRun=true,
-				 plugin= {"pretty","html:target/Cucumberreport.html"},
-			     tags="@all"  // all scenarios in all feature files will run
+				 glue= {"com.cucumber.definition"},
+	
+						 plugin= {"html:target/Cucumberreport.html",
+								 "pretty",
+								"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+								"timeline:test-output-thread/"		
+						}
+			     // all scenarios in all feature files will run
 			    //	tags="@login" // only login scanerio will run
 				//tags="@logout" 
 				//tags="@regression" // scenario with regression test will run
@@ -22,7 +26,7 @@ import io.cucumber.junit.CucumberOptions;
 				// tags = "@register"  // Now give the tag @register, you will observe before and after hook is executed
 				 
 		)
-public class TestRunner {
+public class TestRunnerCucumber {
 
 }
 

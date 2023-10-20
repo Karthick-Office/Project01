@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"4122fb23-a56e-454b-af04-4c5ca89f8b61","feature":"NinjaDemo Login page","scenario":"Check user is able to open login page","start":1697803819559,"group":1,"content":"","tags":"@all,@regression,@smoke,","end":1697803819722,"className":"passed"},{"id":"35fb0a9c-cfc3-4d80-8fb9-42d292be872a","feature":"NinjaDemo Login page","scenario":"logout of the Page","start":1697803819792,"group":1,"content":"","tags":"@all,@logout,@smoke,","end":1697803819802,"className":"passed"},{"id":"bb28980c-52cf-4e42-9532-d9fc8cd5892d","feature":"NinjaDemo Login page","scenario":"Loginto the webpage","start":1697803819764,"group":1,"content":"","tags":"@all,@login,@regression,","end":1697803819775,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[#1,main,5,main]"}]);
+});
