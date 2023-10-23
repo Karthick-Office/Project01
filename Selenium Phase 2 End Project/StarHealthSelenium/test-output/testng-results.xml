@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-23T13:11:50 IST" name="Suite" finished-at="2023-10-23T13:12:02 IST" duration-ms="12345">
+    <groups>
+    </groups>
+    <test started-at="2023-10-23T13:11:50 IST" name="Test" finished-at="2023-10-23T13:12:02 IST" duration-ms="12345">
+      <class name="in.starhealth.TestNg.StartHealthPage">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:in.starhealth.TestNg.StartHealthPage@25ce9dc4]" started-at="2023-10-23T13:11:50 IST" name="openBrowser" finished-at="2023-10-23T13:12:02 IST" duration-ms="12048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="Validate_title()[pri:49, instance:in.starhealth.TestNg.StartHealthPage@25ce9dc4]" started-at="2023-10-23T13:12:02 IST" name="Validate_title" finished-at="2023-10-23T13:12:02 IST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Validate_title -->
+        <test-method signature="Test_Header_plan(java.lang.String,java.lang.String,java.lang.String)[pri:50, instance:in.starhealth.TestNg.StartHealthPage@25ce9dc4]" started-at="2023-10-23T13:12:02 IST" name="Test_Header_plan" finished-at="2023-10-23T13:12:02 IST" duration-ms="20" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Karthick]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7397001345]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[karthick@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Header_plan -->
+        <test-method signature="validatedatafromExcel(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:51, instance:in.starhealth.TestNg.StartHealthPage@25ce9dc4]" started-at="2023-10-23T13:12:02 IST" name="validatedatafromExcel" finished-at="2023-10-23T13:12:02 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method validatedatafromExcel requires 4 parameters but 3 were supplied in the @Test annotation.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method validatedatafromExcel requires 4 parameters but 3 were supplied in the @Test annotation.
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:447)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
+at org.testng.internal.Parameters.createParameters(Parameters.java:700)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:884)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatedatafromExcel -->
+        <test-method signature="Clickontwitter()[pri:52, instance:in.starhealth.TestNg.StartHealthPage@25ce9dc4]" started-at="2023-10-23T13:12:02 IST" name="Clickontwitter" finished-at="2023-10-23T13:12:02 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Clickontwitter -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:in.starhealth.TestNg.StartHealthPage@25ce9dc4]" started-at="2023-10-23T13:12:02 IST" name="teardown" finished-at="2023-10-23T13:12:02 IST" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- in.starhealth.TestNg.StartHealthPage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
