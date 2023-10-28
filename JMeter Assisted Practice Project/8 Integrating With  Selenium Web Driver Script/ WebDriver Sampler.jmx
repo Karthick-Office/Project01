@@ -93,7 +93,7 @@ WDS.sampleResult.sampleEnd()
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">A:\Project\Project01\JMeter Assisted Practice Project\8 Integrating With  Selenium Web Driver Script\ WebDriver Sampler.jmx</stringProp>
+          <stringProp name="filename">A:Project\Project01\JMeter Assisted Practice Project\8 Integrating With  Selenium Web Driver Script\ WebDriver Sampler.jmx</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>

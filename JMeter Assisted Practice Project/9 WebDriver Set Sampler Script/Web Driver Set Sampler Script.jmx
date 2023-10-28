@@ -28,7 +28,7 @@
         <com.googlecode.jmeter.plugins.webdriver.config.EdgeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.EdgeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.EdgeDriverConfig" testname="Edge Driver Config" enabled="true">
           <boolProp name="WebDriverConfig.acceptinsecurecerts">true</boolProp>
           <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
-          <stringProp name="WebDriverConfig.driver_path">A:\Jmeter\chromedriver.exe</stringProp>
+          <stringProp name="WebDriverConfig.driver_path">A:Jmeter\chromedriver.exe</stringProp>
           <boolProp name="WebDriverConfig.dev_mode">true</boolProp>
           <boolProp name="WebDriverConfig.headless">false</boolProp>
           <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
