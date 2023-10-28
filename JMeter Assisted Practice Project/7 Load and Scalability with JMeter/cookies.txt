@@ -1,0 +1,3 @@
+# JMeter generated Cookie file
+	TRUE		TRUE	0	UserName	Karthick@123
+	TRUE		TRUE	0	Password	1234567

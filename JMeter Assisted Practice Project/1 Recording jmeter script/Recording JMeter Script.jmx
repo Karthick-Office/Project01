@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Recording JMeter Script" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.comments">JMeter Assisted Practice Project</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="JMeter Script Recording" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="TestPlan.comments">HTTP Script Recorder </stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/captiveportal/generate_204-1" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">edge-http.microsoft.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/captiveportal/generate_204</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Arch" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Arch</stringProp>
+                  <stringProp name="Header.value">x86_64</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-OS" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-OS</stringProp>
+                  <stringProp name="Header.value">Windows</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Edge-Version" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Edge-Version</stringProp>
+                  <stringProp name="Header.value">118.0.2088.69</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Edge-Channel" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Edge-Channel</stringProp>
+                  <stringProp name="Header.value">stable</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-OS-Version" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-OS-Version</stringProp>
+                  <stringProp name="Header.value">10.0.22621</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-WebView" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-WebView</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.69</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/-2" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">google.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/-3" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">www.google.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            <stringProp name="TestPlan.comments">Detected a redirect from the previous sample</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/captiveportal/generate_204-4" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">edge-http.microsoft.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/captiveportal/generate_204</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Arch" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Arch</stringProp>
+                  <stringProp name="Header.value">x86_64</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-OS" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-OS</stringProp>
+                  <stringProp name="Header.value">Windows</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Edge-Version" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Edge-Version</stringProp>
+                  <stringProp name="Header.value">118.0.2088.69</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Edge-Channel" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Edge-Channel</stringProp>
+                  <stringProp name="Header.value">stable</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-OS-Version" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-OS-Version</stringProp>
+                  <stringProp name="Header.value">10.0.22621</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-WebView" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-WebView</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.69</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/-5" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">www.google.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/-6" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">google.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/-7" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">www.google.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            <stringProp name="TestPlan.comments">Detected a redirect from the previous sample</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/generate_204-8" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">www.gstatic.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/generate_204</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/captiveportal/generate_204-9" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">edge-http.microsoft.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/captiveportal/generate_204</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Arch" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Arch</stringProp>
+                  <stringProp name="Header.value">x86_64</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-OS" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-OS</stringProp>
+                  <stringProp name="Header.value">Windows</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Edge-Version" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Edge-Version</stringProp>
+                  <stringProp name="Header.value">118.0.2088.69</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-Edge-Channel" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-Edge-Channel</stringProp>
+                  <stringProp name="Header.value">stable</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-OS-Version" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-OS-Version</stringProp>
+                  <stringProp name="Header.value">10.0.22621</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Mesh-Client-WebView" elementType="Header">
+                  <stringProp name="Header.name">Sec-Mesh-Client-WebView</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.69</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/service/update2/json?cup2key=13:twDZgh8T5B5JsJIn6KzlJkjAuyNyeevyP9RSQbuwQQU&amp;cup2hreq=afa09eeaecdaa5c91e48ba1366cd4e55227905f3eb5c8987018616284603b2e0-10" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;request&quot;:{&quot;@os&quot;:&quot;win&quot;,&quot;@updater&quot;:&quot;chrome&quot;,&quot;acceptformat&quot;:&quot;crx3,puff&quot;,&quot;app&quot;:[{&quot;appid&quot;:&quot;ihnlcenocehgdaegdmhbidjhnhdchfmm&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1::&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{f2ad7fc1-fee8-43f2-a499-67ed5d007ecd}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;0.0.0.0&quot;},{&quot;appid&quot;:&quot;neifaoindggfcjicffkgpmnlppeffabd&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:1299:21m9@0.1&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.9ba8ab825d1ec954a636adc66da9e9dd784096ce83182054ac288daf50c04b46&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{3d45d176-9c5e-4bea-a1d7-73b438c99ce8}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;1.0.2512.1&quot;},{&quot;appid&quot;:&quot;gcmjkmgdlgnkkcocmoeiminaijmmjnii&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:bm1:&quot;,&quot;cohortname&quot;:&quot;Stable&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.cd1978742a4afdbaaa15bf712d5c90bef4144caa99024df98f6a9ad58043ae85&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{dd610e14-f230-4e51-a240-d38c9a31bc86}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;9.49.1&quot;},{&quot;appid&quot;:&quot;lmelglejhemejginpboagddgdfbepgmp&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:lwl:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.a248a93f9e93263df26dcb397251de32d6a38c77fbe7426a6a6e25850789d759&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{4949098d-40c0-49e1-afb0-60784541c4fc}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;418&quot;},{&quot;appid&quot;:&quot;giekcmmlnklenlaomppkphknjmnnpneh&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:j5l:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.fd515ec0dc30d25a09641b8b83729234bc50f4511e35ce17d24fd996252eaace&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{ad47c644-cf68-4083-b966-111a1ac18766}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;7&quot;},{&quot;appid&quot;:&quot;hnimpnehoodheedghdeeijklkeaacbdc&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1::&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.6f6bc93dcd62dc251850d2ff458fda96083ceb7fbe8eeb11248b8485ef2aea23&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{4f6f8abb-c15f-4eed-82e2-513b8ec9837e}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;0.57.44.2492&quot;},{&quot;appid&quot;:&quot;khaoiebndkojlmppeemjhbpbandiljpe&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:cux:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.a2abb5cf57d3ad529ade67df01567446c6c6a5225b29715119e17c0e0aea6c03&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{b731296b-5413-4881-8731-7fb2061ac8e5}&quot;,&quot;rd&quot;:6143},&quot;tag&quot;:&quot;default&quot;,&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;62&quot;},{&quot;appid&quot;:&quot;llkgjffcdpffmhiakmfcdcblohccpfmo&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1::&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.3e4f959036fef1cae2b1f426864a23f11caae1c96a2816523f2daf4213c3cc73&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{34a4f575-3b83-4ed8-8769-afcfb32b9d4d}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;1.0.0.14&quot;},{&quot;appid&quot;:&quot;laoigpblnllgcgjnjnllmfolckpjlhki&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:10zr:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{baa40dc9-664f-4639-8f8e-10581f44cef7}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;1.0.7.1652906823&quot;},{&quot;appid&quot;:&quot;efniojlnjndmcbiieegkicadnoecjjef&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:18ql:&quot;,&quot;cohortname&quot;:&quot;Auto Stage3&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.bead787cfbf33997b1afcd7910fed817f43c1bf44cea828b89a22cbb2f6538ff&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{3d85b252-db21-4d3d-b17a-fc6f9353aeaf}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;750&quot;},{&quot;appid&quot;:&quot;ehgidpndbllacpjalkiimkbadgjfnnmc&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:ofl:&quot;,&quot;cohortname&quot;:&quot;stable64&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.a8a79d350c2a5e3bc36226633a8e0bed0dfab184e77f38fc8f0820ebacf8eafc&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{07dac9b4-979e-4960-a3b4-68299638f097}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2018.8.8.0&quot;},{&quot;appid&quot;:&quot;jamhcnnkihinmdlkakkaopbjbbcngflc&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:wvr:209r@0.1&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.a451a5689ab6b8e94d4392b9908239cafb9736f64539ed9d0574790665a4f2a3&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{ec9f4408-55d6-4d70-815f-0922e6ee6db3}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;120.0.6046.0&quot;},{&quot;appid&quot;:&quot;jflookgnkcckhobaglndicnbbgbonegd&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:s7x:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.e02aeb7034fefaea35a0be29445a820068710a13880e66c1ba482cac43e8d16a&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{b53b0546-63e7-4fdc-95d5-5cc841134db3}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;3001&quot;},{&quot;appid&quot;:&quot;oimompecagnajdejgnnjijobebaeigek&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:1zdx:&quot;,&quot;cohortname&quot;:&quot;Chrome 106+&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{4fc14e82-be66-45bd-9cb2-e66499c76c30}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;4.10.2710.0&quot;},{&quot;appid&quot;:&quot;ojhpjlocmbogdgmfpkhlaaeamibhnphh&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:w0x:&quot;,&quot;cohortname&quot;:&quot;All users&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.545666a4efd056351597bb386aea1368105ededc976ed5650d8682daab9f37ff&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{846414ce-221e-4f2c-a08d-71eecab57b5c}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;3&quot;},{&quot;accept_locale&quot;:&quot;ENUS500000&quot;,&quot;appid&quot;:&quot;obedbbhbpmojnkanicioggnmelmoomoc&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:s6f/20ol/20or:&quot;,&quot;cohortname&quot;:&quot;Control&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.f755ab4df8526830a65c81a69ded2f42988b240cd6bffb66b92074e427623d60&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{6e47ecc9-ec69-438b-964c-546b05a79f71}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;20230916.566281051.14&quot;},{&quot;appid&quot;:&quot;kiabhabjdbkjdpjbpigfodbdjmbglcoo&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:v3l:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.d777e561d401292893abda887af337f2d2e9755e47dd4a42402130484d09429b&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{9b12f617-a0f5-4128-b191-d73eadbb2f6e}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2023.9.4.1&quot;},{&quot;appid&quot;:&quot;ggkkehgbnfjpeggfpleeakpidbkibbmn&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:ut9/1a0f/2133:2139@0.5&quot;,&quot;cohortname&quot;:&quot;Rollout&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.84d1c998e0b3a04eb6f9061918c51f4a7b9cdaeba3f20ad4add67a278eb582d9&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{6263c9ae-3dcb-49aa-b915-a7bf635ec0e1}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2023.10.18.1141&quot;},{&quot;appid&quot;:&quot;hfnkpimlhhgieaddgfemjhofmfblmnib&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:jcl:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.24cef187209b78937e1655680ab0a8712fed9598f174b3a0845789af34742862&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{5225f685-d6ec-4f7c-aa9a-853fc5e7733f}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;8325&quot;},{&quot;appid&quot;:&quot;eeigpngbgcognadeebkilcpcaedhellh&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:w59:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.c64c9c1008f3ba5f6e18b3ca524bc98dcd8acfae0a2720a8f1f3ef0f8d643d05&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{eae132f5-162b-4bc0-b624-d583758c76a0}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2020.11.2.164946&quot;},{&quot;appid&quot;:&quot;gonpemdgkjcecdgbnaabipppbmgfggbe&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:z1x:&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6066,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.d68a1e6d53e787feb3bcab12c5e7e76ade2594add8c77084503cd288e460a838&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{b8dd5cd9-bf5d-4663-8ac4-c7b04e5764cc}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2023.10.12.0&quot;},{&quot;appid&quot;:&quot;niikhdgajlphfehepabhhblakbdgeefj&quot;,&quot;brand&quot;:&quot;ONGR&quot;,&quot;cohort&quot;:&quot;1:1uh3:&quot;,&quot;cohortname&quot;:&quot;Auto Main Cohort.&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:6126,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.316c987ccb9e429256c3d174c0fd97842ea47b9ed729064ecbecbbe17acc9858&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{df53270e-0ff1-4b5b-8560-c1b22df8584f}&quot;,&quot;rd&quot;:6143},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2023.10.24.0&quot;}],&quot;arch&quot;:&quot;x64&quot;,&quot;dedup&quot;:&quot;cr&quot;,&quot;domainjoined&quot;:false,&quot;hw&quot;:{&quot;avx&quot;:true,&quot;physmemory&quot;:8,&quot;sse&quot;:true,&quot;sse2&quot;:true,&quot;sse3&quot;:true,&quot;sse41&quot;:true,&quot;sse42&quot;:true,&quot;ssse3&quot;:true},&quot;ismachine&quot;:true,&quot;nacl_arch&quot;:&quot;x86-64&quot;,&quot;os&quot;:{&quot;arch&quot;:&quot;x86_64&quot;,&quot;platform&quot;:&quot;Windows&quot;,&quot;version&quot;:&quot;10.0.22621.2506&quot;},&quot;prodversion&quot;:&quot;118.0.5993.118&quot;,&quot;protocol&quot;:&quot;3.1&quot;,&quot;requestid&quot;:&quot;{aa5771c8-4e85-49b2-864e-ef0c6c189190}&quot;,&quot;sessionid&quot;:&quot;{05a958cb-3181-4df8-a704-ea8841a3c227}&quot;,&quot;updater&quot;:{&quot;autoupdatecheckenabled&quot;:true,&quot;ismachine&quot;:true,&quot;lastchecked&quot;:0,&quot;laststarted&quot;:0,&quot;name&quot;:&quot;Omaha&quot;,&quot;updatepolicy&quot;:-1,&quot;version&quot;:&quot;1.3.36.312&quot;},&quot;updaterversion&quot;:&quot;118.0.5993.118&quot;}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">update.googleapis.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.path">/service/update2/json?cup2key=13:twDZgh8T5B5JsJIn6KzlJkjAuyNyeevyP9RSQbuwQQU&amp;cup2hreq=afa09eeaecdaa5c91e48ba1366cd4e55227905f3eb5c8987018616284603b2e0</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+            <boolProp name="HTTPSampler.image_parser">false</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <boolProp name="HTTPSampler.md5">false</boolProp>
+            <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-Goog-Update-AppId" elementType="Header">
+                  <stringProp name="Header.name">X-Goog-Update-AppId</stringProp>
+                  <stringProp name="Header.value">ihnlcenocehgdaegdmhbidjhnhdchfmm,neifaoindggfcjicffkgpmnlppeffabd,gcmjkmgdlgnkkcocmoeiminaijmmjnii,lmelglejhemejginpboagddgdfbepgmp,giekcmmlnklenlaomppkphknjmnnpneh,hnimpnehoodheedghdeeijklkeaacbdc,khaoiebndkojlmppeemjhbpbandiljpe,llkgjffcdpffmhiakmfcdcblohccpfmo,laoigpblnllgcgjnjnllmfolckpjlhki,efniojlnjndmcbiieegkicadnoecjjef,ehgidpndbllacpjalkiimkbadgjfnnmc,jamhcnnkihinmdlkakkaopbjbbcngflc,jflookgnkcckhobaglndicnbbgbonegd,oimompecagnajdejgnnjijobebaeigek,ojhpjlocmbogdgmfpkhlaaeamibhnphh,obedbbhbpmojnkanicioggnmelmoomoc,kiabhabjdbkjdpjbpigfodbdjmbglcoo,ggkkehgbnfjpeggfpleeakpidbkibbmn,hfnkpimlhhgieaddgfemjhofmfblmnib,eeigpngbgcognadeebkilcpcaedhellh,gonpemdgkjcecdgbnaabipppbmgfggbe,niikhdgajlphfehepabhhblakbdgeefj</stringProp>
+                </elementProp>
+                <elementProp name="X-Goog-Update-Updater" elementType="Header">
+                  <stringProp name="Header.name">X-Goog-Update-Updater</stringProp>
+                  <stringProp name="Header.value">chrome-118.0.5993.118</stringProp>
+                </elementProp>
+                <elementProp name="X-Goog-Update-Interactivity" elementType="Header">
+                  <stringProp name="Header.name">X-Goog-Update-Interactivity</stringProp>
+                  <stringProp name="Header.value">bg</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
+        <stringProp name="ProxyControlGui.port">8888</stringProp>
+        <collectionProp name="ProxyControlGui.exclude_list"/>
+        <collectionProp name="ProxyControlGui.include_list"/>
+        <boolProp name="ProxyControlGui.capture_http_headers">true</boolProp>
+        <intProp name="ProxyControlGui.grouping_mode">0</intProp>
+        <boolProp name="ProxyControlGui.add_assertion">false</boolProp>
+        <stringProp name="ProxyControlGui.sampler_type_name"></stringProp>
+        <boolProp name="ProxyControlGui.sampler_redirect_automatically">false</boolProp>
+        <boolProp name="ProxyControlGui.sampler_follow_redirects">true</boolProp>
+        <boolProp name="ProxyControlGui.use_keepalive">true</boolProp>
+        <boolProp name="ProxyControlGui.detect_graphql_request">true</boolProp>
+        <boolProp name="ProxyControlGui.sampler_download_images">false</boolProp>
+        <intProp name="ProxyControlGui.proxy_http_sampler_naming_mode">0</intProp>
+        <stringProp name="ProxyControlGui.default_encoding"></stringProp>
+        <stringProp name="ProxyControlGui.proxy_prefix_http_sampler_name">HomePage</stringProp>
+        <stringProp name="ProxyControlGui.proxy_pause_http_sampler"></stringProp>
+        <boolProp name="ProxyControlGui.notify_child_sl_filtered">false</boolProp>
+        <boolProp name="ProxyControlGui.regex_match">false</boolProp>
+        <stringProp name="ProxyControlGui.content_type_include"></stringProp>
+        <stringProp name="ProxyControlGui.content_type_exclude"></stringProp>
+        <stringProp name="ProxyControlGui.domains">google.com</stringProp>
+      </ProxyControl>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
