@@ -1,0 +1,79 @@
+{
+	"id": "74b09e08-7234-4d4b-bfbd-ae814945ce59",
+	"name": "Weather API Report",
+	"timestamp": "2023-11-07T07:04:00.417Z",
+	"collection_id": "30899499-741b3efb-e622-4af8-bd41-3edcebc64e98",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 10,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-11-07T07:03:58.870Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "44de6ebf-14a9-4415-85f9-6b2d6bf5f1b2",
+			"name": "Get Weather Using Variable.",
+			"url": "api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=e1151fde0242327d274a99b6087525e5",
+			"time": 99,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				353,
+				164,
+				123,
+				140,
+				99
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Content-Type is present": true
+				}
+			]
+		}
+	],
+	"count": 5,
+	"totalTime": 879,
+	"collection": {
+		"requests": [
+			{
+				"id": "44de6ebf-14a9-4415-85f9-6b2d6bf5f1b2",
+				"method": "GET"
+			}
+		]
+	}
+}
