@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "e53e3fad-00ea-4d20-b77c-4bb61a137980",
+		"name": "Pet_ID_Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30899499",
+		"_collection_link": "https://www.postman.com/karthick-office/workspace/office-karthick/collection/30899499-e53e3fad-00ea-4d20-b77c-4bb61a137980?action=share&source=collection_link&creator=30899499"
+	},
+	"item": [
+		{
+			"name": "Postman Assignment_001: Create Petid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":{{petid}},\r\n    \"category\": {\r\n        \"id\": 0,\r\n        \"name\": \"string\"\r\n    },\r\n    \"name\": \"{{petname}}\",\r\n    \"photoUrls\": [\r\n        \"string\"\r\n    ],\r\n    \"tags\": [\r\n        {\r\n            \"id\": 0,\r\n            \"name\": \"string\"\r\n        }\r\n    ],\r\n    \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/pet"
+			},
+			"response": []
+		},
+		{
+			"name": "Postman Assignment_001:Validate Petid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/pet/{{petid}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Postman Assignment_001:Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/pet/{{petid}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Postman Assignment_002:Put",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Get the current environment name\r",
+							"var environment = pm.environment.name;\r",
+							"\r",
+							"// Set the status variable based on the environment\r",
+							"if (environment === 'DEV') {\r",
+							"  pm.variables.set('status', 'available_DEV');\r",
+							"} else if (environment === 'QA') {\r",
+							"  pm.variables.set('status', 'available_QA');\r",
+							"} else if (environment === 'PROD') {\r",
+							"  pm.variables.set('status', 'available_PROD');\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate ID in response\r",
+							"pm.test(\"ID should be 20021\", function () {\r",
+							"  pm.expect(pm.response.json().id).to.eql(20021);\r",
+							"});\r",
+							"\r",
+							"// Validate response code\r",
+							"pm.test(\"Response code should be 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate status value in response\r",
+							"pm.test(\"Status value should match the environment\", function () {\r",
+							"  var expectedStatus = pm.variables.get('status');\r",
+							"  pm.expect(pm.response.json().status).to.eql(expectedStatus);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 9223372016900013000, \"category\": {\r\n\"id\": 20021,\r\n\"name\": \"string\" },\r\n\"name\": \"doggie\", \"photoUrls\": [\r\n\"string\"\r\n], \"tags\": [\r\n{\r\n\"id\": 0,\r\n\"name\": \"string\"\r\n}\r\n],\r\n\"status\": \"{{status}}\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{testURL}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Postman Assignment_003:Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate response code\r",
+							"pm.test(\"Response code should be 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate username in response\r",
+							"pm.test(\"Username should be Uname001\", function () {\r",
+							"  var expectedUsername = pm.globals.get('username');\r",
+							"  pm.expect(pm.response.json().username).to.eql(expectedUsername);\r",
+							"});\r",
+							"\r",
+							"// Validate email in response\r",
+							"pm.test(\"Email should be Positive@Attitude.com\", function () {\r",
+							"  pm.expect(pm.response.json().email).to.eql(\"Positive@Attitude.com\");\r",
+							"});\r",
+							"\r",
+							"// Validate userStatus in response\r",
+							"pm.test(\"UserStatus should be 1\", function () {\r",
+							"  pm.expect(pm.response.json().userStatus).to.eql(1);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/user/{{username}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Postman Assignment_004:Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if the response status is 200\r",
+							"pm.test(\"Response code should be 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Parse the response JSON\r",
+							"var pets = pm.response.json();\r",
+							"\r",
+							"// Function to validate the status of all pets in the response\r",
+							"function validatePetStatus(expectedStatus) {\r",
+							"  for (var i = 0; i < pets.length; i++) {\r",
+							"    pm.expect(pets[i].status).to.eql(expectedStatus);\r",
+							"  }\r",
+							"}\r",
+							"\r",
+							"// Validate for status = available\r",
+							"if (pm.environment.get('status') === 'available') {\r",
+							"  pm.test(\"Pet status should be available\", function () {\r",
+							"    validatePetStatus('available');\r",
+							"  });\r",
+							"}\r",
+							"\r",
+							"// Validate for status = pending\r",
+							"if (pm.environment.get('status') === 'pending') {\r",
+							"  pm.test(\"Pet status should be pending\", function () {\r",
+							"    validatePetStatus('pending');\r",
+							"  });\r",
+							"}\r",
+							"\r",
+							"// Validate for status = sold\r",
+							"if (pm.environment.get('status') === 'sold') {\r",
+							"  pm.test(\"Pet status should be sold\", function () {\r",
+							"    validatePetStatus('sold');\r",
+							"  });\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/findByStatus?status",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Postman Assignment_005:Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check if the response status is 200\r",
+							"pm.test(\"Response code should be 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate code in response\r",
+							"pm.test(\"Code should be 200\", function () {\r",
+							"  pm.expect(pm.response.json().code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"// Validate message in response\r",
+							"pm.test(\"Message should be 'OK'\", function () {\r",
+							"  pm.expect(pm.response.json().message).to.eql(\"ok\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/user/logout"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "petid",
+			"value": "101"
+		}
+	]
+}
