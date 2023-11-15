@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "479bdf88-e399-481d-bdbf-902e340e5919",
+		"name": "ATE Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30899499",
+		"_collection_link": "https://www.postman.com/karthick-office/workspace/office-karthick/collection/30899499-479bdf88-e399-481d-bdbf-902e340e5919?action=share&source=collection_link&creator=30899499"
+	},
+	"item": [
+		{
+			"name": "Retrieve the list of all products in the store",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/get-shoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"get-shoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve the list of all registered users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/get-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"get-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the product.",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8100/update-shoe?id=611&image=lion.png&name=lionShoe&category=Running&sizes=9&price=3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"update-shoe"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "611"
+						},
+						{
+							"key": "image",
+							"value": "lion.png"
+						},
+						{
+							"key": "name",
+							"value": "lionShoe"
+						},
+						{
+							"key": "category",
+							"value": "Running"
+						},
+						{
+							"key": "sizes",
+							"value": "9"
+						},
+						{
+							"key": "price",
+							"value": "3000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add the product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/add-shoe?id=611&image=lion.png&name=lionShoe&category=Running&sizes=9&price=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"add-shoe"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "611"
+						},
+						{
+							"key": "image",
+							"value": "lion.png"
+						},
+						{
+							"key": "name",
+							"value": "lionShoe"
+						},
+						{
+							"key": "category",
+							"value": "Running"
+						},
+						{
+							"key": "sizes",
+							"value": "9"
+						},
+						{
+							"key": "price",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/delete-shoe?id=611\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"delete-shoe"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "611\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
