@@ -5,8 +5,12 @@
     <classes>
       <class name="Tests.LoginTest">
         <methods>
-          <include name="testLogin"/>
+          <include name="testLogin" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="generateTestStatus"/>
+          <include name="generateReports"/>
+          <include name="getnameMethod"/>
           <include name="tearDown"/>
+          <include name="InitalizeExtentReport"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- Tests.LoginTest -->

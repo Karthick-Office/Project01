@@ -1,9 +1,11 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import Base.BaseTest;
 
@@ -33,6 +35,12 @@ public class LoginPage extends BaseTest {
         passwordInput.sendKeys(password);
         rememberMeCheckbox.click();
         loginButton.click();
+        WebElement errorMessageElement = driver.findElement(By.xpath("//span[contains(text(), 'Login was unsuccessful. Please correct the errors and try again.')]"));
+        if (errorMessageElement.isDisplayed()) {
+            Assert.fail("Login was unsuccessful. Error message is present.");
+        } else {
+            System.out.println("Login successful. Error message is not present.");
+        }
     }
 
     
