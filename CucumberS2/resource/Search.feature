@@ -1,3 +1,4 @@
+@Search
 Feature: Product search functionality
 
   Scenario: User searches for a product
